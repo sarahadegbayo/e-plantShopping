@@ -47,6 +47,31 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+h1 {
+    text-align: center;             /* Centers the text */
+    position: relative;             /* Makes positioning for pseudo-elements relative to the <h1> */
+    margin: 20px;                      /* Remove default margin */
+    padding: 10px 0;                /* Add some padding around the text for spacing */
+}
+
+h1::before, h1::after {
+    content: '';                    /* Pseudo-elements content */
+    position: absolute;             /* Position them relative to the <h1> */
+    left: 0;                        /* Align the pseudo-elements to the left edge */
+    right: 0;                       /* Align the pseudo-elements to the right edge */
+    height: 2px;                    /* Height of the underline */
+    background-color: #000;         /* Color of the underline (change to any color you prefer) */
+}
+
+h1::before {
+    top: 0;                         /* Position the top line at the top of the <h1> */
+}
+
+h1::after {
+    bottom: 0;                      /* Position the bottom line at the bottom of the <h1> */
+}
+
 .product-list {
     display: flex;
     flex-wrap: wrap;
